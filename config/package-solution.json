@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "power-bi-client-side-solution",
+    "id": "9af3aedf-cc61-41af-9e59-3505e72aba57",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": ""
+    },
+  
+  "webApiPermissionRequests": [
+    {
+      "resource": "Power BI Service",
+      "scope": "Group.Read.All"
+    },
+    {
+      "resource": "Power BI Service",
+      "scope": "Dataset.Read.All"
+    },
+    {
+      "resource": "Power BI Service",
+      "scope": "Report.Read.All"
+    },
+    {
+      "resource": "Power BI Service",
+      "scope": "Dashboard.Read.All"
+    }
+  ]
+},
+  "paths": {
+    "zippedPackage": "solution/power-bi.sppkg"
+  }
+}

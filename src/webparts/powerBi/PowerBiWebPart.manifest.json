@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "9620e140-99fe-45ca-be50-c1e331b505fc",
+  "alias": "PowerBiWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Other" },
+    "title": { "default": "PowerBi" },
+    "description": { "default": "PowerBi description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "PowerBi"
+    }
+  }]
+}
