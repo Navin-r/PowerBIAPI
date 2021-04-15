@@ -21,7 +21,7 @@ export class PowerBiService {
 
   private static powerbiApiResourceId = "https://analysis.windows.net/powerbi/api";
 
-  private static workspacesUrl = "https://app.powerbi.com/groups/me/reports/";//changes
+  private static workspacesUrl = "https://api.powerbi.com/v1.0/myorg/groups/";
 
 
   private static adalAccessTokenStorageKey: string = "adal.access.token.keyhttps://analysis.windows.net/powerbi/api";
@@ -68,8 +68,7 @@ export class PowerBiService {
 
 
   public static GetReport = (serviceScope: ServiceScope, workspaceId: string, reportId: string): Promise<PowerBiReport> => {
-    let reportUrl = PowerBiService.workspacesUrl + reportId + "/ReportSection?tenant=" + workspaceId ;//changes
-
+    let reportUrl = PowerBiService.workspacesUrl + workspaceId + "/reports/" + reportId + "/";
     let pbiClient: AadHttpClient = new AadHttpClient(serviceScope, PowerBiService.powerbiApiResourceId);
     var reqHeaders: HeadersInit = new Headers();
     reqHeaders.append("Accept", "*");
